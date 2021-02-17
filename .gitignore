@@ -1,0 +1,8 @@
+.DS_Store
+DS_Store
+/vendor
+/build
+/run
+/cmake-build-debug
+.idea
+*.iml

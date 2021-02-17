@@ -1,0 +1,10 @@
+#!/bin/bash
+
+git remote add origin git@github.com:mingjie-gmj/gap.git
+git config user.name "mingjie-gmj"
+git config user.email "mingjie.gmj@gmail.com"
+git add .
+git commit -m "update"
+git branch -M main
+git push -u origin main -f
+
