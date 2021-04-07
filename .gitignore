@@ -6,3 +6,4 @@ DS_Store
 /cmake-build-debug
 .idea
 *.iml
+/cmake-build-release-system
