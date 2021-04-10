@@ -2,7 +2,41 @@
 
 #include "math.h"
 
+int max(int a, int b) {
+    return a > b ? a : b;
+}
+
+int min(int a, int b) {
+    return a < b ? a : b;
+}
+
 int storeWater(int *bucket, int bucketSize, int *vat, int vatSize) {
+
+    // 1 <= bucket.length == vat.length <= 100
+    int vmax = vat[0];
+    for (int i = 1; i < vatSize; i++) {
+        if (vat[i] > vmax) {
+            vmax = vat[i];
+        }
+    }
+    if (!vmax) {
+        return 0;
+    }
+    int res = 2147483647;
+    for (int i = 1; i < vmax + 1; i++) {
+        int cur = i;
+        for (int j = 0; j < bucketSize; j++) {
+            int needs = ceil((double) vat[j] / i);
+            int times = max(0, needs - bucket[j]);
+            cur += times;
+        }
+        res = min(res, cur);
+    }
+    return res;
+}
+
+
+int storeWater_old(int *bucket, int bucketSize, int *vat, int vatSize) {
     if (bucketSize != vatSize || bucketSize == 0 || vatSize == 0) {
         return 0;
     }
@@ -27,7 +61,7 @@ int storeWater(int *bucket, int bucketSize, int *vat, int vatSize) {
         while (true) {
             int m1 = ceil(((float) vat[i]) / bucket[i]);
             int m2 = ceil(((float) vat[i]) / (bucket[i] + 1));
-            if (m1 - m2 > 1) {
+            if (m1 - m2 >= 1) {
                 bucket[i]++;
                 cnt++;
             } else {
