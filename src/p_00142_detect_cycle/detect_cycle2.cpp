@@ -1,3 +1,4 @@
+#include <uthash.h>
 #include "detect_cycle.h"
 
 
@@ -16,7 +17,7 @@ struct hashTable* find(struct ListNode* ikey) {
 }
 
 void insert(struct ListNode* ikey) {
-    struct hashTable* tmp = malloc(sizeof(struct hashTable));
+    struct hashTable* tmp = (struct hashTable*)malloc(sizeof(struct hashTable));
     tmp->key = ikey;
     HASH_ADD_PTR(hashtable, key, tmp);
 }
@@ -30,5 +31,5 @@ struct ListNode* detectCycle(struct ListNode* head) {
         insert(head);
         head = head->next;
     }
-    return false;
+    return 0;
 }
