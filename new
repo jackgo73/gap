@@ -54,7 +54,3 @@ TEST(${dir}, basetest1) {
     // EXPECT_EQ (s->fib(0), 1);
 }
 EOF
-
-
-
-echo $dir >> README.md
