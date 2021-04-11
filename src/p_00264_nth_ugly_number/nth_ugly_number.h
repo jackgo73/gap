@@ -31,6 +31,6 @@ public:
         }
         return ugly;
     };
-}
+};
 
 #endif //P_00264_NTH_UGLY_NUMBER
