@@ -52,7 +52,7 @@ void recursive(char *number, int *answer, int index, int depth, char **ans, int 
 /**
  * Note: The returned array must be malloced, assume caller calls free().
  */
-char **letterCombinations(char *digits, int *returnSize) {
+char **letterCombinations1(char *digits, int *returnSize) {
     int a[100] = {0};                           // 临时解空间
     int depth = strlen(digits);                 // 最大深度
     int num = (int) pow(4, depth);       // 最大路径个数
