@@ -1,7 +1,7 @@
 #include <uthash.h>
 #include "detect_cycle.h"
 
-
+#include "search.h"
 
 struct hashTable {
     struct ListNode* key;
