@@ -46,7 +46,7 @@ void DFS(char *digits, int depth, int index, char **ans, int *pathWay)
     }
 }
 
-char ** letterCombinations_DFS(char * digits, int* returnSize)
+char ** letterCombinations1(char * digits, int* returnSize)
 {
     int depth = strlen(digits);	// 最大深度
     if(!digits || !depth)
