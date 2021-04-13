@@ -3,7 +3,5 @@
 
 
 char ** letterCombinations(char * digits, int* returnSize);
-char ** letterCombinations1(char * digits, int* returnSize);
-
 
 #endif //P_00017_LETTER_COMBINATIONS

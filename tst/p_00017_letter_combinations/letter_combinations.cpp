@@ -6,3 +6,4 @@ TEST(p_00017_letter_combinations, basetest1) {
     int returnSize = 0;
     letterCombinations(input, &returnSize);
 }
+
