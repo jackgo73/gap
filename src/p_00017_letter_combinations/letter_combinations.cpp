@@ -4,7 +4,7 @@
 #include "string.h"
 #include "math.h"
 
-static char *g_keys[10] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
+static char g_keys[10][5] = {"", "", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
 static int g_keys_size[10] = {1, 1, 3, 3, 3, 3, 3, 4, 3, 4};
 
 char **ans;
