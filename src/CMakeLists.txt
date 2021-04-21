@@ -8,5 +8,3 @@ set(SOURCES ${SOURCES})
 add_library(lib_${BINARY} STATIC ${SOURCES})
 
 add_executable(exe_main main.cpp)
-add_executable(exe_examples_hcreate a_examples/hcreate.c)
-add_executable(exe_examples_lfind a_examples/lfind.c)
