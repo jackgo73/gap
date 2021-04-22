@@ -37,7 +37,7 @@ cat << EOF > src/$dir/$file2
 #ifndef P_${number}_${utitle}
 #define P_${number}_${utitle}
 
-
+#include "utils.h"
 
 #endif //P_${number}_${utitle}
 EOF
