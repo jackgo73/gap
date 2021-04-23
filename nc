@@ -15,7 +15,7 @@ utitle=$(echo "${title}" | tr "[a-z]" "[A-Z]")
 #             src dir                #
 ######################################
 dir=p_"$number"_"$title"
-file1="$title".c
+file1="$title".cpp
 file2="$title".h
 
 if [ ! -d src/$dir ]; then
