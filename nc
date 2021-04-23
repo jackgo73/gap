@@ -37,7 +37,7 @@ cat << EOF > src/$dir/$file2
 #ifndef P_${number}_${utitle}
 #define P_${number}_${utitle}
 
-#include "utils.h"
+#include "common.h"
 
 #endif //P_${number}_${utitle}
 EOF
@@ -51,6 +51,7 @@ touch tst/$dir/$file3
 
 cat << EOF > tst/$dir/$file3
 #include "gtest/gtest.h"
+#include "utils.h"
 #include "${dir}/${file2}"
 
 TEST(${dir}, basetest1) {
