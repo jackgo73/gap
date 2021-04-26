@@ -8,17 +8,17 @@
 
 #include "common.h"
 
-struct ListNode *arrayToList(int *arr, int n) {
+inline struct ListNode *arrayToList(int *arr, int n) {
     if (!arr || n < 1) {
         return NULL;
     }
-    struct ListNode *head = (struct ListNode *) malloc(n * sizeof(struct ListNode));
+    struct ListNode *head = (struct ListNode *) malloc(sizeof(struct ListNode));
     struct ListNode *p = head;
 
     int i;
     for (i = 0; i < n - 1; i++, p = p->next) {
         p->val = *(arr + i);
-        p->next = p + 1;
+        p->next = (struct ListNode *) malloc(sizeof(struct ListNode));
     }
     p->val = *(arr + i);
     p->next = NULL;
