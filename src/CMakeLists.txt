@@ -5,4 +5,4 @@ file(GLOB_RECURSE SOURCES LIST_DIRECTORIES true *.h *.cpp *.c)
 set(SOURCES ${SOURCES})
 add_library(${BINARY} STATIC ${SOURCES})
 
-#add_executable(exe_main main.cpp)
+add_executable(exe_main main.cpp)
