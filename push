@@ -4,7 +4,7 @@ git remote add origin git@github.com:mingjie-gmj/gap.git
 git config user.name "jackgo73"
 git config user.email "jackgo73@outlook.com"
 git add .
-git commit -m "update" --date=format:relative:11.days.ago
+git commit -m "update" --date=format:relative:10.days.ago
 git branch -M main
 git push -u origin main -f
 

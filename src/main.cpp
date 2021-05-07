@@ -27,10 +27,41 @@ int main() {
     std::cout << "haha" << std::endl;
 
     MdfdVec *v;
-    SMgrRelationData *reln = (SMgrRelationData *)malloc(sizeof(SMgrRelationData));
+    SMgrRelationData *reln = (SMgrRelationData *) malloc(sizeof(SMgrRelationData));
 
-    int targetseg = 0;
+    MdfdVec d100, d233;
+    d100.mdfd_vfd = 10;
+    d100.mdfd_segno = 12;
+    d233.mdfd_vfd = 20;
+    d233.mdfd_segno = 25;
+
+    reln->md_seg_fds[0] = &d100;
+    reln->md_num_open_segs[0] = 100;
+    reln->md_seg_fds[1] = &d233;
+    reln->md_num_open_segs[1] = 233;
+
+    MdfdVec *s100, *s233;
+    s100 = (MdfdVec *) malloc(sizeof(MdfdVec));
+    s100->mdfd_segno = 333;
+    s100->mdfd_vfd = 344;
+    s233 = (MdfdVec *) malloc(sizeof(MdfdVec));
+    s233->mdfd_segno = 555;
+    s233->mdfd_vfd = 50;
+
+    reln->md_seg_fds[2] = s100;
+    reln->md_seg_fds[3] = s233;
+
+    // 堆正序生长，栈逆序生长！
+
+    int targetseg = 1;
     int forknum = 0;
+
+    struct _MdfdVec *s1 = reln->md_seg_fds[forknum];
+    struct _MdfdVec s2 = reln->md_seg_fds[forknum][0];
+    struct _MdfdVec s3 = *s1;
+    struct _MdfdVec s4 = *(s1 - 1);
+    struct _MdfdVec *s5 = &reln->md_seg_fds[forknum][1];
+
 
     v = &reln->md_seg_fds[forknum][targetseg];
 
