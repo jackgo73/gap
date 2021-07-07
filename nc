@@ -18,14 +18,7 @@ dir=p_"$number"_"$title"
 file1="$title".cpp
 file2="$title".h
 
-if [ ! -d src/$dir ]; then
-  mkdir -p src/$dir
-else
-  echo "src/$dir" already existed.
-  exit 1
-fi
-
-
+mkdir -p src/$dir
 touch src/$dir/$file1
 touch src/$dir/$file2
 
@@ -37,7 +30,10 @@ cat << EOF > src/$dir/$file2
 #ifndef P_${number}_${utitle}
 #define P_${number}_${utitle}
 
-#include "common.h"
+
+class Solution {
+};
+
 
 #endif //P_${number}_${utitle}
 EOF
@@ -51,10 +47,10 @@ touch tst/$dir/$file3
 
 cat << EOF > tst/$dir/$file3
 #include "gtest/gtest.h"
-#include "utils.h"
 #include "${dir}/${file2}"
 
 TEST(${dir}, basetest1) {
-// EXPECT_EQ (fib(0), 1);
+    Solution *s = new Solution();
+    // EXPECT_EQ (s->fib(0), 1);
 }
 EOF
