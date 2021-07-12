@@ -1,11 +1,13 @@
 # rotate
 
 dedicated repo 
-2. has nothing to do with working and company
-3. exercise programming skills
-1. all source code is only related to leetcode
+
+1. has nothing to do with working and company
+2. exercise programming skills
+3. all source code is only related to leetcode
 
 
+---
 
 
 ```
