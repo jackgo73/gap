@@ -27,9 +27,18 @@ def generate_problems(number: str, title: str):
     number = number.zfill(5)
     title = re.sub(r'(?<!^)(?=[A-Z])', '_', title).lower()
 
+    # src
+    src_file_name_cpp = title + ".cpp"
+    src_file_name_h = title + ".h"
+    src_dir_name = "p_" + number + "_" + title
 
-    print(number)
-    print(title)
+    # tst
+    tst_file_name_cpp = title + "_tst.cpp"
+    tst_dir_name = src_dir_name
+
+    print(src_file_name_cpp)
+    print(src_file_name_h)
+    print(src_dir_name)
 
 
 if __name__ == '__main__':

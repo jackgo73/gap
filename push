@@ -1,10 +1,10 @@
 #!/bin/bash
 
-git remote add origin git@github.com:mingjie-gmj/gap.git
+#git remote add origin git@github.com:mingjie-gmj/gap.git
 git config user.name "jackgo73"
 git config user.email "jackgo73@outlook.com"
 git add .
-git commit -m "update" --date=format:relative:8.days.ago
+git commit -m "update" --date=format:relative:1.days.ago
 git branch -M main
 git push -u origin main -f
 
