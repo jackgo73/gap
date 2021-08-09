@@ -12,7 +12,7 @@ utitle=$(echo "${title}" | tr "[a-z]" "[A-Z]")
 
 
 ######################################
-#             src dir                #
+#             problems dir                #
 ######################################
 dir=p_"$number"_"$title"
 file1="$title".cpp

@@ -82,7 +82,7 @@ INCLUDE_GMOCK_FILE_REGEX = re.compile(r'^\s*#\s*include\s*"(gmock/.+)"')
 
 # Where to find the source seed files.
 GMOCK_H_SEED = 'include/gmock/gmock.h'
-GMOCK_ALL_CC_SEED = 'src/gmock-all.cc'
+GMOCK_ALL_CC_SEED = 'problems/gmock-all.cc'
 
 # Where to put the generated files.
 GTEST_H_OUTPUT = 'gtest/gtest.h'
@@ -209,7 +209,7 @@ def FuseGMockAllCcToFile(gmock_root, output_file):
           else:
             m = gtest.INCLUDE_SRC_FILE_REGEX.match(line)
             if m:
-              # It's '#include "src/foo"' - let's process it recursively.
+              # It's '#include "problems/foo"' - let's process it recursively.
               ProcessFile(m.group(1))
             else:
               # Otherwise we copy the line unchanged to the output file.

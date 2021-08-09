@@ -35,7 +35,7 @@ def generate_problems(number: str, title: str, mode: str):
     number = number.zfill(5)
     title = re.sub(r'(?<!^)(?=[A-Z])', '_', title).lower()
 
-    # src
+    # problems
     src_file_name_cpp = title + ".cpp"
     src_file_name_h = title + ".h"
     src_dir_name = mode + "_" + number + "_" + title
@@ -43,12 +43,13 @@ def generate_problems(number: str, title: str, mode: str):
     src_content_cpp = "#include\"%s\"" % src_file_name_h
     src_content_h = "#ifndef %s\n" % src_dir_name.upper()
     src_content_h += "#define %s\n" % src_dir_name.upper()
-    src_content_h += "#include <stdlib.h>\n"
-    src_content_h += "#include <stdio.h>\n\n\n\n\n"
+    src_content_h += "#include <vector>\n"
+    src_content_h += "#include <cstdlib>\n"
+    src_content_h += "#include <cstdio>\n\n\n\n\n"
     src_content_h += "#endif //%s" % src_dir_name.upper()
 
-    # touch src files
-    src_dir_path = "src/%s" % src_dir_name
+    # touch problems files
+    src_dir_path = "problems/%s" % src_dir_name
     folder = os.path.exists(src_dir_path)
     if not folder:
         os.makedirs(src_dir_path)
@@ -72,7 +73,7 @@ def generate_problems(number: str, title: str, mode: str):
     tst_content_cpp += "    EXPECT_EQ (1, 1);\n"
     tst_content_cpp += "}\n"
 
-    # touch src files
+    # touch problems files
     tst_dir_path = "tst/%s" % tst_dir_name
     folder = os.path.exists(tst_dir_path)
     if not folder:
