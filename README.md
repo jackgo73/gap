@@ -5,7 +5,8 @@
 > All codes are related to the leetcode problems
 
 ## note 
-Train brick moving skills
+
+brick moving skills
 
 
 

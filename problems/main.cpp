@@ -38,9 +38,6 @@ typedef struct HeapTupleHeaderData HeapTupleHeaderData;
 int main() {
     Size		len;
     Size len1;
-
-    int a[];
-
 //
 //    len = offsetof(HeapTupleHeaderData, t_bits);
 //    len1 = sizeof(HeapTupleHeaderData);
