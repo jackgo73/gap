@@ -1,15 +1,17 @@
-# rotate
+# gap
 
-dedicated repo 
+> This repo is not related to the company or work in any way
+>
+> All codes are related to the leetcode problems
 
-1. has nothing to do with working and company
-2. exercise programming skills
-3. all source code is only related to leetcode
-
-
----
+## note 
+Train brick moving skills
 
 
+
+
+
+## cmd
 ```
 cd build
 cmake3 --build ./ --target rotate_tst -- -j 12

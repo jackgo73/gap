@@ -3,7 +3,7 @@
 git config user.name "jackgo73"
 git config user.email "jackgo73@outlook.com"
 git add .
-git commit -m "update" --date=format:relative:6.days.ago
+git commit -m "update" --date=format:relative:2.days.ago
 git branch -M main
 git push -u origin main -f
 
