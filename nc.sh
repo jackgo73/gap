@@ -30,6 +30,7 @@ EOF
 
 touch tst/${tst_name}
 cat << EOF > tst/"${tst_name}"
+#include "ut_00000.h"
 #include "gtest/gtest.h"
 #include "${src_name}"
 
