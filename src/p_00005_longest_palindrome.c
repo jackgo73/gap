@@ -2,24 +2,21 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef signed char int8;          /* == 8 bits */
-typedef signed short int16;        /* == 16 bits */
-typedef signed int int32;          /* == 32 bits */
-typedef unsigned char uint8;       /* == 8 bits */
-typedef unsigned short uint16;     /* == 16 bits */
-typedef unsigned int uint32;       /* == 32 bits */
+void help(const char *s, int N, int left, int right, int *start, int *len) {
+    while (left >= 0 && right < N && s[left] == s[right])
+        left--, right++;
+    if (right - left - 1 > *len) {
+        *start = left + 1;
+        *len = right - left - 1;
+    }
+}
 
 char *longestPalindrome(char *s) {
-    uint32 len = strlen(s);
-    char *p = s, *l, *r;
-    while (*(p++)) {
-        for (l = p, r = p; l >= s && r < s && *l == *r; l--, r++) {
-
-        }
-        for (l = p, r = p + 1; l >= s && r < s && *l == *r; l--, r++) {
-
-        }
-    }
-
-
+    int N = (int) strlen(s), start = 0, len = 0;
+    for (int i = 0; i < N; i++)
+        help(s, N, i - 1, i + 1, &start, &len);
+    for (int i = 0; i < N; i++)
+        help(s, N, i, i + 1, &start, &len);
+    s[start + len] = '\0';
+    return s + start;
 }
