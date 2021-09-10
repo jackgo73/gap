@@ -54,7 +54,7 @@ EXAMPLES
 
 This tool is experimental.  In particular, it assumes that there is no
 conditional inclusion of Google Mock or Google Test headers.  Please
-report any problems to googlemock@googlegroups.com.  You can read
+report any src to googlemock@googlegroups.com.  You can read
 https://github.com/google/googletest/blob/master/googlemock/docs/cook_book.md
 for more
 information.
@@ -82,7 +82,7 @@ INCLUDE_GMOCK_FILE_REGEX = re.compile(r'^\s*#\s*include\s*"(gmock/.+)"')
 
 # Where to find the source seed files.
 GMOCK_H_SEED = 'include/gmock/gmock.h'
-GMOCK_ALL_CC_SEED = 'problems/gmock-all.cc'
+GMOCK_ALL_CC_SEED = 'src/gmock-all.cc'
 
 # Where to put the generated files.
 GTEST_H_OUTPUT = 'gtest/gtest.h'
@@ -209,7 +209,7 @@ def FuseGMockAllCcToFile(gmock_root, output_file):
           else:
             m = gtest.INCLUDE_SRC_FILE_REGEX.match(line)
             if m:
-              # It's '#include "problems/foo"' - let's process it recursively.
+              # It's '#include "src/foo"' - let's process it recursively.
               ProcessFile(m.group(1))
             else:
               # Otherwise we copy the line unchanged to the output file.

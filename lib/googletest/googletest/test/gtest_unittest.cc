@@ -1006,7 +1006,7 @@ TEST_F(VectorShuffleTest, ShufflesEntireVector) {
   EXPECT_FALSE(VectorIsUnshuffled(vector_)) << vector_;
 
   // Tests the first and last elements in particular to ensure that
-  // there are no off-by-one problems in our shuffle algorithm.
+  // there are no off-by-one src in our shuffle algorithm.
   EXPECT_NE(0, vector_[0]);
   EXPECT_NE(static_cast<int>(kVectorSize - 1), vector_[kVectorSize - 1]);
 }

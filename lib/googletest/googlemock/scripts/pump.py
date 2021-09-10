@@ -784,7 +784,7 @@ def IsMultiLineIWYUPragma(line):
 def IsHeaderGuardIncludeOrOneLineIWYUPragma(line):
   return (re.match(r'^#(ifndef|define|endif\s*//)\s*[\w_]+\s*$', line) or
           re.match(r'^#include\s', line) or
-          # Don't break IWYU pragmas, either; that causes iwyu.py problems.
+          # Don't break IWYU pragmas, either; that causes iwyu.py src.
           re.search(r'// IWYU pragma: ', line))
 
 

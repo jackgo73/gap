@@ -1486,7 +1486,7 @@ class GTEST_API_ UnitTest {
 // However, we strongly recommend you to write your own main() and
 // call AddGlobalTestEnvironment() there, as relying on initialization
 // of global variables makes the code harder to read and may cause
-// problems when you register multiple environments from different
+// src when you register multiple environments from different
 // translation units and the environments have dependencies among them
 // (remember that the compiler doesn't guarantee the order in which
 // global variables from different translation units are initialized).

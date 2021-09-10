@@ -140,7 +140,7 @@
 // Among the platforms, Cygwin, Linux, Mac OS X, and Windows have the
 // most stable support.  Since core members of the Google Test project
 // don't have access to other platforms, support for them may be less
-// stable.  If you notice any problems on your platform, please notify
+// stable.  If you notice any src on your platform, please notify
 // googletestframework@googlegroups.com (patches for fixing them are
 // even more welcome!).
 //
@@ -631,7 +631,7 @@ typedef struct _RTL_CRITICAL_SECTION GTEST_CRITICAL_SECTION;
 
 // The GNU compiler emits a warning if nested "if" statements are followed by
 // an "else" statement and braces are not used to explicitly disambiguate the
-// "else" binding.  This leads to problems with code like:
+// "else" binding.  This leads to src with code like:
 //
 //   if (gate)
 //     ASSERT_*(condition) << "Some message";
@@ -1273,7 +1273,7 @@ class GTEST_API_ Notification {
 
 // On MinGW, we can have both GTEST_OS_WINDOWS and GTEST_HAS_PTHREAD
 // defined, but we don't want to use MinGW's pthreads implementation, which
-// has conformance problems with some versions of the POSIX standard.
+// has conformance src with some versions of the POSIX standard.
 # if GTEST_HAS_PTHREAD && !GTEST_OS_WINDOWS_MINGW
 
 // As a C-function, ThreadFuncWithCLinkage cannot be templated itself.

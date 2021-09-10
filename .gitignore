@@ -4,7 +4,7 @@ DS_Store
 /build
 /build1
 /run
-/cmake-build-debug
-.idea
 *.iml
 /cmake-build-release-system
+/cmake-build-debug
+.idea
