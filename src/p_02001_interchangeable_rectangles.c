@@ -14,6 +14,9 @@ long long interchangeableRectangles(int **rectangles, int rectanglesSize, int *r
 
     long long sum = 0;
     long long count = 0;
+
+    // 计算 组合 个数的 一趟方法
+    // C n 2
     for (int i = 0; i < rectanglesSize - 1; i++) {
         if (res[i] == res[i + 1]) {
             count++;
