@@ -6,9 +6,8 @@
 
 ## note 
 
-brick moving skills
-
-
+- 1143： 最长公共字符串
+  - 583： 最短距离
 
 
 
