@@ -19,6 +19,12 @@ echo "tst file name: " ${tst_name}
 
 touch src/${src_name}
 cat << EOF > src/${src_name}
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <limits.h>
+#include <stdbool.h>
+#include <inttypes.h>
 
 EOF
 

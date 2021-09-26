@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <inttypes.h>
 
 void help(const char *s, int N, int left, int right, int *start, int *len) {
     while (left >= 0 && right < N && s[left] == s[right])
