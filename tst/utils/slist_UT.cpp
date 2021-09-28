@@ -1,12 +1,9 @@
 #include "gtest/gtest.h"
-#include "benchmark/benchmark.h"
-#include "slist.h"
+#include "utils/slist.h"
 
 TEST(slist, TEST01) {
     int arr[] = {1, 2, 3, 4, 5};
-
-    ListNode *l = makeListNode1(arr, 5);
-
+    ListNode *l = makeListNode1(arr, 5);//
     EXPECT_EQ (l->val, 1);
     EXPECT_EQ (l->next->val, 2);
     EXPECT_EQ (l->next->next->val, 3);

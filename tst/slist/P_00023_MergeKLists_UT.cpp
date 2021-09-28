@@ -1,6 +1,5 @@
 #include "gtest/gtest.h"
-#include "benchmark/benchmark.h"
-#include "slist/P_00023_MergeKLists.c"
+#include "P_00023_MergeKLists.h"
 
 TEST(P_00023_MergeKLists, TEST01) {
     const int rowCnt = 3;

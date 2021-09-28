@@ -1,11 +1,5 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <limits.h>
-#include <stdbool.h>
-#include <inttypes.h>
 
-#include "slist.h"
+#include "P_00023_MergeKLists.h"
 
 /*  k == lists.length  0 <= k <= 10^4  */
 /*  0 <= lists[i].length <= 500        */
