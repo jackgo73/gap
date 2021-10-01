@@ -12,17 +12,19 @@ typedef struct {
     int nextFree;
     int lruMoreRecently;
     int lruLessRecently;
-} LruElement;
+} Data;
 
 typedef struct {
     int sizeLRUCache;
-    LruElement e[0];
+    Data e[0];
 } LRUCache;
 
+#define GetLruCacheHead(obj) (&obj->e[0])
+#define GetLruCacheNode(n) (&obj->e[n])
 
 LRUCache *lRUCacheCreate(int capacity) {
-    LRUCache *cache = (LRUCache *) malloc(sizeof(LRUCache) + sizeof(LruElement) * (capacity + 1));
-    memset(cache, 0, sizeof(LRUCache) + sizeof(LruElement) * (capacity + 1));
+    LRUCache *cache = (LRUCache *) malloc(sizeof(LRUCache) + sizeof(Data) * (capacity + 1));
+    memset(cache, 0, sizeof(LRUCache) + sizeof(Data) * (capacity + 1));
     cache->sizeLRUCache = capacity;
     for (int i = 0; i < cache->sizeLRUCache; i++) {
         cache->e[i].nextFree = i + 1;
@@ -31,6 +33,11 @@ LRUCache *lRUCacheCreate(int capacity) {
 }
 
 int lRUCacheGet(LRUCache *obj, int key) {
+    int nextFree = GetLruCacheHead(obj)->nextFree;
+    GetLruCacheHead(obj)->nextFree = GetLruCacheNode(nextFree)->nextFree;
+
+    Data *data = GetLruCacheNode(nextFree);
+
 
 }
 
