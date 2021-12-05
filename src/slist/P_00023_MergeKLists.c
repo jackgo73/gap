@@ -23,7 +23,7 @@ struct ListNode *mergeKLists(struct ListNode **lists, int listsSize) {
     }
 
     int allValsIdx = 0;
-    int16_t *allVals = (int16_t *) malloc(sizeof(int16_t) * 20 * MAX_COL_LENHTH);
+    int16_t *allVals = (int16_t *) malloc(sizeof(int16_t) * listsSize * MAX_COL_LENHTH);
     if (allVals == NULL) {
         return NULL;
     }
@@ -36,10 +36,16 @@ struct ListNode *mergeKLists(struct ListNode **lists, int listsSize) {
         }
     }
 
+    /* in case: [[]] */
+    if (allValsIdx == 0) {
+        return NULL;
+    }
+
     qsort(allVals, allValsIdx, sizeof(int16_t), cmp);
 
     struct ListNode *res = (struct ListNode *) malloc(sizeof(struct ListNode) * allValsIdx);
     if (res == NULL) {
+        free(allVals);
         return NULL;
     }
     struct ListNode *p = res;

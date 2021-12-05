@@ -22,6 +22,15 @@ TEST(P_00023_MergeKLists, TEST01) {
     free(res);
 }
 
+TEST(P_00023_MergeKLists, TEST02) {
+    struct ListNode *r = NULL;
+    struct ListNode **l = &r;
+
+    struct ListNode *res = mergeKLists(l, 1);
+
+    EXPECT_TRUE(res == NULL);
+}
+
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
