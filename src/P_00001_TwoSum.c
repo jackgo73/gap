@@ -4,7 +4,6 @@
 #include <limits.h>
 #include <stdbool.h>
 #include <inttypes.h>
-#include "binheap.h"
 
 
 int* twoSum(int* nums, int numsSize, int target, int* returnSize){

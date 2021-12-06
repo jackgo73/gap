@@ -35,8 +35,10 @@ if (GAP_BUILD_TESTS)
     gap_test(tst/base/dimarray.cpp)
 
     gap_test(tst/include/slist_UT.cpp)
-    gap_test("tst/P_00001_TwoSum_UT.cpp")
+
     gap_test("tst/slist/P_00023_MergeKLists_UT.cpp")
+
+    gap_test("tst/P_00001_TwoSum_UT.cpp")
 
 
 endif (GAP_BUILD_TESTS)

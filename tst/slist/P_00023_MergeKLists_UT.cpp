@@ -3,23 +3,27 @@
 #include "slist/P_00023_MergeKLists.c"
 
 TEST(P_00023_MergeKLists, TEST01) {
+    const int rowCnt = 3;
+    int r1[] = {3, 1, 4, 5};
+    int r2[] = {3, 1, 3, 4};
+    int r3[] = {2, 2, 6};
 
-    EXPECT_EQ (1, 1);
+    int *r[rowCnt] = {r1, r2, r3};
+    struct ListNode **l = makeListNode2(r, rowCnt);
+
+    struct ListNode *res = mergeKLists(l, rowCnt);
+
+    EXPECT_EQ (res->val, 1);
+    EXPECT_EQ (res->next->val, 1);
+    EXPECT_EQ (res->next->next->val, 2);
+    EXPECT_EQ (res->next->next->next->val, 3);
+    EXPECT_EQ (res->next->next->next->next->val, 4);
+
+    free(res);
 }
-
-static void BM_P_00023_MergeKLists(benchmark::State &state) {
-    for (auto _ : state) {
-        for (uint32_t i = int64_t(state.range(0)); i > 0; i--) {
-            // solution->...
-        }
-    }
-}
-
-// BENCHMARK(BM_P_00023_MergeKLists)->Arg(1)->Arg(10);
 
 
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
-    benchmark::RunSpecifiedBenchmarks();
     return RUN_ALL_TESTS();
 }
