@@ -24,3 +24,4 @@ gap_test("slist/P_00023_MergeKLists_UT.cpp")
 
 gap_test("slist/P_00876_MiddleNode_UT.cpp")
 gap_test("slist/P_00021_MergeTwoLists_UT.cpp")
+gap_test("slist/P_00142_DetectCycle_UT.cpp")
