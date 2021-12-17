@@ -3,7 +3,8 @@
 #define MAX_ELEMS 100
 
 struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
-    struct ListNode hdr{0, NULL}, *p = &hdr;
+
+    struct ListNode hdr, *p = &hdr;
     while (list1 && list2) {
         if (list1->val <= list2->val) {
             p->next = list1;
@@ -16,9 +17,10 @@ struct ListNode *mergeTwoLists(struct ListNode *list1, struct ListNode *list2) {
     }
     if (list1) {
         p->next = list1;
-    }
-    if (list2) {
+    } else if (list2) {
         p->next = list2;
+    } else {
+        p->next = NULL;
     }
     return hdr.next;
 }
