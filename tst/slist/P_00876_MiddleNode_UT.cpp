@@ -22,6 +22,14 @@ TEST(P_00876_MiddleNode, TEST03) {
     EXPECT_EQ (r->val, 2);
 }
 
+TEST(P_00876_MiddleNode, TEST04) {
+    int arr[] = {1, 2, 3};
+    ListNode *l = makeListNode1(arr, 3);
+    ListNode *r = middleNode(l);
+    EXPECT_EQ (r->val, 2);
+}
+
+
 int main(int argc, char **argv) {
     testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();

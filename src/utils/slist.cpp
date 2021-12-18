@@ -3,11 +3,12 @@
 
 
 struct ListNode *makeListNode1(int const *arr, int cnt) {
+    int ss = SizeOfListNode;
     struct ListNode *startPos = (struct ListNode *) malloc(cnt * SizeOfListNode), *p = startPos;
     int i = 0;
     for (; i < cnt - 1; i++) {
         p->val = arr[i];
-        p->next = p + SizeOfListNode;
+        p->next = (struct ListNode *)((char*)p + SizeOfListNode);
         p = p->next;
     }
     p->val = arr[i];
