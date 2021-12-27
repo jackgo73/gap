@@ -26,6 +26,8 @@ cat << EOF > src/${src_name}
 #include <unordered_map>
 #include <queue>
 
+using namespace std;
+
 class Solution {
 public:
 

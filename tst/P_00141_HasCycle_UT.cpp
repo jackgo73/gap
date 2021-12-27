@@ -5,8 +5,11 @@
 auto *solution = new Solution();
 
 TEST(P_00141_HasCycle, TEST01) {
-
-    EXPECT_EQ (1, 1);
+    auto *arr = new vector<int>{3, 2, 0, -4};
+    ListNode *list = new ListNode(arr);
+    list->next->next->next->next = list->next;
+    bool r = solution->hasCycle(list);
+    EXPECT_EQ (r, true);
 }
 
 static void BM_P_00141_HasCycle(benchmark::State &state) {
