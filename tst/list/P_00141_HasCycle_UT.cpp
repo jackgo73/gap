@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "benchmark/benchmark.h"
-#include "P_00141_HasCycle.cpp"
+#include "list/P_00141_HasCycle.cpp"
 
 auto *solution = new Solution();
 

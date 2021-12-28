@@ -9,10 +9,10 @@ add_library(liblt SHARED ${SRC_SOURCES})
 target_sources(liblt
         PRIVATE
         src/P_00001_TwoSum.cpp
-        src/P_00019_RemoveNthFromEnd.cpp
-        src/P_00021_MergeTwoLists.cpp
-        src/P_00023_MergeKLists.cpp
-        src/P_00141_HasCycle.cpp
+        src/list/P_00019_RemoveNthFromEnd.cpp
+        src/list/P_00021_MergeTwoLists.cpp
+        src/list/P_00023_MergeKLists.cpp
+        src/list/P_00141_HasCycle.cpp
         )
 
 
@@ -35,9 +35,9 @@ if (GAP_BUILD_TESTS)
 
 
     gap_test("tst/P_00001_TwoSum_UT.cpp")
-    gap_test("tst/P_00019_RemoveNthFromEnd_UT.cpp")
-    gap_test("tst/P_00021_MergeTwoLists_UT.cpp")
-    gap_test("tst/P_00023_MergeKLists_UT.cpp")
-    gap_test("tst/P_00141_HasCycle_UT.cpp")
+    gap_test("tst/list/P_00019_RemoveNthFromEnd_UT.cpp")
+    gap_test("tst/list/P_00021_MergeTwoLists_UT.cpp")
+    gap_test("tst/list/P_00023_MergeKLists_UT.cpp")
+    gap_test("tst/list/P_00141_HasCycle_UT.cpp")
 
 endif (GAP_BUILD_TESTS)

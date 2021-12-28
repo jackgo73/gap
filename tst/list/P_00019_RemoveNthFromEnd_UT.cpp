@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "benchmark/benchmark.h"
-#include "P_00019_RemoveNthFromEnd.cpp"
+#include "list/P_00019_RemoveNthFromEnd.cpp"
 
 auto *solution = new Solution();
 

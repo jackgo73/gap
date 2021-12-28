@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 #include "benchmark/benchmark.h"
-#include "P_00021_MergeTwoLists.cpp"
+#include "list/P_00021_MergeTwoLists.cpp"
 
 auto *solution = new Solution();
 
