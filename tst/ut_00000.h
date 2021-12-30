@@ -1,6 +1,0 @@
-#ifndef ROTATE_UT_00000_H
-#define ROTATE_UT_00000_H
-
-
-
-#endif //ROTATE_UT_00000_H
