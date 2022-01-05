@@ -9,6 +9,7 @@ add_library(liblt SHARED ${SRC_SOURCES})
 target_sources(liblt
         PRIVATE
         src/P_00001_TwoSum.cpp
+        src/P_00019_RemoveNthFromEnd.cpp
         src/P_00021_MergeTwoLists.cpp
         )
 
@@ -32,6 +33,7 @@ if (GAP_BUILD_TESTS)
 
 
     gap_test("tst/P_00001_TwoSum_UT.cpp")
+    gap_test("tst/P_00019_RemoveNthFromEnd_UT.cpp")
     gap_test("tst/P_00021_MergeTwoLists_UT.cpp")
 
 endif (GAP_BUILD_TESTS)
