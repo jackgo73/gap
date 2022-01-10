@@ -11,6 +11,7 @@ add_library(liblt SHARED ${SRC_SOURCES})
 target_sources(liblt
         PRIVATE
         src/P_00001_TwoSum.c
+        src/slist/P_00023_MergeKLists.c
         )
 
 
@@ -31,7 +32,9 @@ if (GAP_BUILD_TESTS)
     add_subdirectory("lib/googletest")
     add_subdirectory("lib/benchmark")
 
-
+    gap_test(tst/include/slist_UT.cpp)
     gap_test("tst/P_00001_TwoSum_UT.cpp")
+    gap_test("tst/slist/P_00023_MergeKLists_UT.cpp")
+
 
 endif (GAP_BUILD_TESTS)
