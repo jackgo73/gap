@@ -9,7 +9,7 @@ typedef struct htab {
 
 
 struct ListNode *detectCycle(struct ListNode *head) {
-    HTAB *h[N];
+    HTAB *h[N] = {NULL};
     while (head) {
         if (h[abs(head->val)] == NULL) {
             HTAB *k = (HTAB *) malloc(sizeof(HTAB));

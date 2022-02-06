@@ -35,6 +35,7 @@ cat << EOF > src/include/${hdr_name}
 
 EOF
 
+mkdir src/${type}
 touch src/${type}/${src_name}
 cat << EOF > src/${type}/${src_name}
 #include "${hdr_name}"
@@ -42,7 +43,7 @@ cat << EOF > src/${type}/${src_name}
 EOF
 
 
-
+mkdir tst/${type}
 touch tst/${type}/${tst_name}
 cat << EOF > tst/${type}/"${tst_name}"
 #include "gtest/gtest.h"
